@@ -9441,19 +9441,19 @@ REGISTRY_PROVENANCE = {
             "sponsors' own press releases, which can lag the bill's page on "
             "congress.gov."),
     },
-    "SENATE_RACES_2026": {
-        "label": "2026 U.S. Senate candidates on AI data centers",
-        "as_of": "August 2026",
+    "SENATE_WINNERS_2026": {
+        "label": "2026 U.S. Senate winners on AI data centers",
+        "as_of": "November 2026",
         "source": None,
-        "churn": "high",
+        "churn": "medium",
         "caveat": (
-            "The ballot roster is read from each state's own certified "
-            "candidate list and is solid; the AI/data-center records are not "
-            "evenly covered. Most filed candidates have no located record and "
-            "are shown as such rather than as neutral. Rosters also still "
-            "move — a pending primary, a withdrawal, or a court ruling can "
-            "change the field, so check the race's linked state candidate "
-            "list before quoting a name."),
+            "Who won is read from data/election_results_2026.json, where most "
+            "results are still recorded as called rather than certified. The "
+            "records were researched after the election and are uneven: a "
+            "sitting senator has years of bills and letters to find, while a "
+            "first-time candidate may have only a campaign page. A winner "
+            "with nothing located is shown as such rather than as neutral, "
+            "and a statement made while campaigning is a promise, not a vote."),
     },
     "MORATORIUMS_DF": {
         "label": "Moratorium & ban tracker",

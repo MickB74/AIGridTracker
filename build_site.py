@@ -852,7 +852,7 @@ NAV_GROUPS = [
         ("Moratoriums", "moratoriums.html"),
         ("PUCs", "puc.html"),
         ("Officials scorecard", "scorecard.html"),
-        ("Senate races 2026", "senate-races.html"),
+        ("Senate winners 2026", "senate-winners.html"),
         ("All 100 senators", "senators.html"),
         ("House races 2026", "house-races.html"),
         # ("Legislation tracker", "legislation.html"),  # unlinked until
@@ -2123,16 +2123,7 @@ def _mora_source_cell(m):
 
 # race lookups are memoised: attach_records() re-reads the story archive on
 # every call, and these run once per state across 51 builds.
-_SR_BY_ABBREV = None
 _HR_BY_STATE = None
-
-
-def _sr_races_by_abbrev():
-    global _SR_BY_ABBREV
-    if _SR_BY_ABBREV is None:
-        import src.senate_races as sr
-        _SR_BY_ABBREV = {r["abbrev"]: r for r in sr.races()}
-    return _SR_BY_ABBREV
 
 
 def _hr_races_by_state():
@@ -2320,34 +2311,24 @@ def _state_delegation_html(state, abbrev):
 
 
 def _state_senate_race_html(state, abbrev):
-    """The 2026 Senate race, if this state has one on the ballot."""
-    r = _sr_races_by_abbrev().get(abbrev)
-    if not r:
+    """The senator this state elected in 2026, if it had a seat on the ballot.
+
+    Until the election this section listed every filed candidate. The race is
+    over, so it now carries the winner only — the one person here a resident
+    can still hold to what they said.
+    """
+    w = next((x for x in _sw_winners() if x["abbrev"] == abbrev), None)
+    if not w:
         return (
             f'<section><h2>2026 U.S. Senate</h2>'
-            f'<p class="muted">Neither {esc(state)} Senate seat is on the '
+            f'<p class="muted">Neither {esc(state)} Senate seat was on the '
             f'2026 ballot. Your senators are still the people who vote on '
             f'federal siting and tax policy — their records are in the '
             f'delegation table above.</p></section>')
-    from src.senate_races import ROSTER_AS_OF
-    src = (f'<a href="{esc(r["roster_source"])}" rel="nofollow">state candidate '
-           f'list</a>' if r["roster_source"] else
-           '<span class="muted">no roster source recorded</span>')
-    special = ' <span class="muted">(special election)</span>' if r["special"] else ""
-    note = (f'<p class="note">{esc(r["note"])}</p>' if r.get("note") else "")
-    method = "../senate-races.html#method"
-    return (
-        f'<section><h2>2026 U.S. Senate race{special}</h2>'
-        f'<p class="muted">PVI {esc(r["pvi"])} · Seat held by '
-        f'{esc(r["incumbent"])} ({esc(r["incumbent_party"])}) · '
-        f'{esc(r["status"])}</p>'
-        f'{note}'
-        + "".join(_sr_candidate(c, r["abbrev"], method_href=method)
-                  for c in r["candidates"])
-        + f'<p class="src">Ballot roster: {src} (read {esc(ROSTER_AS_OF)}).</p>'
-        f'<p><a class="btn ghost" href="../senate-races.html'
-        f'#race-{esc(abbrev.lower())}">All 35 Senate races &rarr;</a></p>'
-        f'</section>')
+    special = ' <span class="muted">(special election)</span>' if w["special"] else ""
+    return (f'<section><h2>Elected to the U.S. Senate in 2026{special}</h2>'
+            f'<div class="sr-cand">{_sw_card(w, p="../", compact=True)}</div>'
+            f'</section>')
 
 
 def _state_house_races_html(state, abbrev):
@@ -12878,36 +12859,21 @@ if(!window.stSortNow){{window.stSortNow=function(id,col){{
 </script>"""
 
 
-def _sr_table(races):
-    """Every 2026 Senate candidate as one row."""
-    rows = []
-    for r in races:
-        for c in r["candidates"]:
-            n_items = len(c.get("items") or [])
-            rows.append([
-                (f'<a href="#race-{esc(r["abbrev"].lower())}">{esc(r["state"])}</a>'
-                 + (' <span class="muted">(special)</span>' if r["special"] else ""),
-                 r["state"]),
-                (f'<strong>{esc(c["name"])}</strong>'
-                 + (' <span class="muted">· incumbent</span>' if c["incumbent"] else "")
-                 + (_WON_BADGE if c.get("won") else ""),
-                 c["name"]),
-                (esc(c["party"]), c["party"]),
-                (_sr_lean_badge(c), {"guardrails": 0, "mixed": 1, "accelerate": 2}.get(c["lean"], 3)),
-                (str(n_items) if n_items else '<span class="muted">—</span>', n_items),
-                (esc(c["as_of"]) if c.get("as_of") else '<span class="muted">—</span>',
-                 c.get("as_of") or ""),
-                (esc(r["pvi"]), r["pvi"]),
-            ])
-    return _sortable_table(
-        "sr-table",
-        [("State", "text"), ("Candidate", "text"), ("Party", "text"),
-         ("Lean", "rank"), ("Cited items", "num"), ("Record read", "text"),
-         ("PVI", "text")],
-        rows,
-        caption="One row per filed candidate. Click a state to jump to the race "
-                "card with every cited item. Lean summarises only the cited items; "
-                "“No record found” is a gap, not a position.")
+def _sen_2026_outcome(s, short=False):
+    """What happened to a seat that was on the 2026 ballot: the sitting
+    senator kept it, or someone else won it. Read from the recorded result;
+    a seat with no recorded winner says so rather than guessing."""
+    st = s["state"].lower()
+    w = next((x for x in _sw_winners() if x["abbrev"] == s["state"]), None)
+    href = f'senate-winners.html#win-{st}'
+    if not w:
+        return "2026 — result not recorded" if short else "2026 result not recorded"
+    if w.get("bioguide") == s["bioguide"]:
+        return (f'<a href="{href}">Re-elected 2026</a>' if short else
+                f'<a href="{href}">re-elected in 2026</a>')
+    return (f'<a href="{href}">Seat won by {esc(w["name"])}</a>' if short else
+            f'seat <a href="{href}">won by {esc(w["name"])}</a> in 2026 · '
+            f'term ends {esc(s["term_end"])}')
 
 
 def _sen_table(rows, names):
@@ -12926,7 +12892,7 @@ def _sen_table(rows, names):
                      f'font-size:12px;padding:3px 9px">{esc(rec["lean_label"])}</span>'
                      if rec else '<span class="muted">No record found</span>')
         n_items = len(rec["items"]) if rec else 0
-        when = (f'<a href="senate-races.html#race-{esc(s["state"].lower())}">2026</a>'
+        when = (_sen_2026_outcome(s, short=True)
                 if s["on_ballot_2026"] else str(s["next_election"]))
         links = " · ".join(x for x in (
             f'<a href="{esc(s["contact"])}" rel="nofollow">contact</a>' if s.get("contact") else "",
@@ -13017,7 +12983,6 @@ def _candidate_record_rows():
     same rows feed the JSON/CSV download and the RSS feed, so the three
     never disagree.
     """
-    import src.senate_races as sr
     import src.house_races as hr
     import src.senators as sn
     rows = []
@@ -13041,15 +13006,21 @@ def _candidate_record_rows():
                              "source_name": i.get("source_name") or "",
                              "grade": (st or {}).get("grade") or "", "lean": rec["lean"],
                              "as_of": rec.get("as_of") or "", "page": page})
-    for r in sr.races():
-        page = f"{SITE_URL}/senate-races#race-{r['abbrev'].lower()}"
-        for c in r["candidates"]:
-            for i in c.get("items") or []:
-                rows.append({"chamber": "Senate", "role": "candidate", "state": r["abbrev"],
-                             "district": "", "name": c["name"], "party": c["party"],
-                             "kind": "statement", "what": i["what"], "date": i.get("date") or "",
-                             "source": i["source"], "source_name": "", "grade": "",
-                             "lean": c["lean"], "as_of": c.get("as_of") or "", "page": page})
+    # Senators-elect: winners not yet on the sitting roster. A re-elected
+    # senator's items already came through the loop above (same record), and
+    # the 82 losing candidates are no longer published — the race tracker
+    # was retired after the election.
+    for w in _sw_winners():
+        if w["sitting"]:
+            continue
+        page = f"{SITE_URL}/senate-winners#win-{w['abbrev'].lower()}"
+        for i in w["items"]:
+            rows.append({"chamber": "Senate", "role": "senator-elect", "state": w["abbrev"],
+                         "district": "", "name": w["name"], "party": w["party"],
+                         "kind": i.get("kind") or "statement", "what": i["what"],
+                         "date": i.get("date") or "", "source": i["source"],
+                         "source_name": i.get("source_name") or "", "grade": "",
+                         "lean": w["lean"], "as_of": w.get("as_of") or "", "page": page})
     for r in hr.races():
         page = f"{SITE_URL}/house-races#race-{r['abbrev'].lower()}-{r['district'].lower()}"
         for c in r["candidates"]:
@@ -13309,192 +13280,385 @@ def _sr_money(abbrev, name):
             f'<a href="{esc(rec["source"])}" rel="nofollow">FEC record</a></p>')
 
 
-def _sr_race_card(r):
-    from src.senate_races import ROSTER_AS_OF
-    note = (f'<p class="note" style="margin:0 0 10px">{esc(r["note"])}</p>'
-            if r.get("note") else "")
-    src = (f'<a href="{esc(r["roster_source"])}" rel="nofollow">state candidate '
-           f'list</a>' if r["roster_source"] else
-           '<span class="muted">no roster source recorded</span>')
-    special = ' <span class="muted">(special election)</span>' if r["special"] else ""
-    state_pg = f'states/{slugify(r["state"])}.html'
-    return f"""
-<section class="card" id="race-{esc(r['abbrev'].lower())}"
-         data-state="{esc(r['state'].lower())}"
-         data-names="{esc(' '.join(c['name'] for c in r['candidates']).lower())}"
-         data-documented="{'1' if r['contested'] else '0'}">
-  <h3 style="margin:0 0 4px">{esc(r['state'])}{special}</h3>
-  <p class="muted" style="margin:0 0 10px">PVI {esc(r['pvi'])} ·
-     Seat held by {esc(r['incumbent'])} ({esc(r['incumbent_party'])}) ·
-     {esc(r['status'])}</p>
-  {note}
-  {_race_result_html(r)}
-  {_sr_stakes(r['abbrev'])}
-  {''.join(_sr_candidate(c, r['abbrev']) for c in r['candidates'])}
-  <p class="src" style="margin:10px 0 0">Ballot roster: {src} (read
-     {esc(ROSTER_AS_OF)}) · <a href="{esc(state_pg)}">{esc(r['state'])}
-     data-center page</a></p>
-</section>"""
+def _sw_winners():
+    """Memoised: winners() re-reads the story archive, and the state pages
+    call this 51 times."""
+    global _SW_ROWS
+    if _SW_ROWS is None:
+        import src.senate_winners as sw
+        _SW_ROWS = sw.winners()
+    return _SW_ROWS
 
 
-def build_senate_races():
-    """Where every 2026 U.S. Senate candidate stands on AI data centers."""
-    import src.senate_races as sr
+_SW_ROWS = None
 
-    races = sr.races()
-    cov = sr.coverage()
-    documented = [r for r in races if r["contested"]]
-    quiet = [r for r in races if not r["contested"]]
 
-    # The Senate holds no roll call on the Ratepayer Protection Act, so for a
-    # long time no Senate candidate could carry a "consensus" lean and the
-    # legend hid it. That stopped being true once a sitting House member ran
-    # for a Senate seat: Chris Pappas (NH) brings his 417-3 House vote with
-    # him. Drive it off the data rather than the assumption — hiding the
-    # legend entry left a badge on the page with nothing to decode it.
+def _sw_items(items):
+    return "".join(
+        f'<li>{esc(i["what"])} <span class="muted">('
+        f'{esc(i["date"]) if i.get("date") else "date not recorded"} — '
+        f'<a href="{esc(i["source"])}" rel="nofollow">'
+        f'{esc(i.get("source_name") or "source")}</a>)</span></li>'
+        for i in items)
+
+
+def _sw_result_line(w):
+    """Who won, by how much, how settled it is, and the page it was read
+    from. `called` stays `called` until the state itself certifies."""
+    from src.race_common import RESULT_STATUS
+    res = w["result"]
+    bits = []
+    if res.get("vote_note"):
+        bits.append(f'{esc(res["vote_note"])}.')
+    if w["flip"]:
+        bits.append("The seat changed party.")
+    if not w["sitting"]:
+        bits.append(f'Takes the seat held by {esc(w["seat_held_by"])} '
+                    f'({esc(w["seat_held_party"])}).')
+    if res.get("note"):
+        bits.append(esc(res["note"]))
+    status = RESULT_STATUS.get(res.get("status"), "")
+    return (f'<p class="note" style="margin:0 0 10px"><strong>Result:</strong> '
+            f'won{" the special election" if w["special"] else ""}. '
+            f'<span class="muted">{esc(status)}.</span> {" ".join(bits)} '
+            f'&mdash; <a href="{esc(res["source"])}" rel="nofollow">source</a>, '
+            f'read {esc(res.get("as_of") or "date not recorded")}.</p>')
+
+
+def _sw_badges(w):
+    kind = ('<span class="gradebadge" style="background:#0ea5e9;font-size:11px;'
+            'padding:2px 7px">Re-elected</span>' if w["sitting"] else
+            '<span class="gradebadge" style="background:#8b5cf6;font-size:11px;'
+            'padding:2px 7px">New senator</span>')
+    flip = (' <span class="gradebadge" style="background:#475569;font-size:11px;'
+            'padding:2px 7px">Seat flipped</span>' if w["flip"] else "")
+    return kind + flip
+
+
+def _sw_card(w, p="", compact=False):
+    """One winner: the result, who they are, and every cited item — actions
+    and statements in separate lists, because a bill introduced is something
+    a resident can hold a senator to and a campaign line is a promise.
+
+    `p` is the path prefix (state pages sit one directory down); `compact`
+    drops the stakes line and state-page link a state page already carries.
+    """
+    st = w["abbrev"].lower()
+    stance = w.get("stance")
+    grade = ""
+    if stance and stance.get("grade"):
+        grade = (f' <span class="gradebadge" style="background:'
+                 f'{_GRADE_COLORS.get(stance["grade"], "#888")}">'
+                 f'{esc(stance["grade"])}</span>')
+    head = (f'<h3 style="margin:0 0 6px">'
+            f'{"" if compact else esc(w["state"]) + " — "}{esc(w["name"])} '
+            f'<span class="muted" style="font-weight:400">({esc(w["party"])})</span></h3>'
+            f'<p style="margin:0 0 8px">{_sw_badges(w)} {_sr_lean_badge(w)}{grade}</p>')
+    parts = [head, _sw_result_line(w)]
+    if not compact:
+        parts.append(_sr_stakes(w["abbrev"]))
+    if w.get("background"):
+        parts.append(f'<p class="muted" style="margin:0 0 8px">{esc(w["background"])}</p>')
+    if stance:
+        src = (f' <span class="muted">— <a href="{esc(stance["source"])}" '
+               f'rel="nofollow">{esc(stance["source_name"])}</a></span>'
+               if stance.get("source") else "")
+        parts.append(f'<p style="margin:0 0 8px"><strong>Graded action '
+                     f'(<a href="{p}scorecard.html">scorecard</a>):</strong> '
+                     f'{esc(stance["text"])}{src}</p>')
+    if w["items"]:
+        parts.append(f'<p style="margin:0 0 8px"><strong>The record in short:</strong> '
+                     f'{esc(w["summary"] or "")}</p>')
+        if w["actions"]:
+            parts.append(f'<p style="margin:0 0 2px"><strong>What they have done</strong> '
+                         f'<span class="muted">— bills, votes, letters, formal acts</span></p>'
+                         f'<ul style="margin:0 0 8px">{_sw_items(w["actions"])}</ul>')
+        if w["statements"]:
+            parts.append(f'<p style="margin:0 0 2px"><strong>What they have said</strong> '
+                         f'<span class="muted">— promises, not actions</span></p>'
+                         f'<ul style="margin:0 0 8px">{_sw_items(w["statements"])}</ul>')
+        parts.append(f'<p class="muted" style="margin:0;font-size:13px">Record read '
+                     f'{esc(w["as_of"] or "— no verification date recorded")}.</p>')
+    else:
+        parts.append(f'<p class="muted" style="margin:0">No documented statement or '
+                     f'action on data centers located'
+                     + (f' (searched {esc(w["as_of"])})' if w.get("as_of") else "")
+                     + f'. Not scored — see <a href="{p}senate-winners.html#method">'
+                       f'how this page treats silence</a>.</p>')
+    parts.append(_sr_money(w["abbrev"], w["name"]))
+    parts.append(_sr_mentions(w))
+    links = []
+    if w["sitting"]:
+        links.append(f'<a class="btn ghost" href="{p}senators.html#write-{st}">'
+                     f'Write to {esc(w["name"])} &rarr;</a>')
+        links.append(f'<a class="btn ghost" href="{p}senators.html#sen-'
+                     f'{esc(w["bioguide"].lower())}">On the senators page</a>')
+    else:
+        links.append(f'<a class="btn ghost" href="{p}senators.html#state-{st}">'
+                     f'Who holds the seat until they are sworn in</a>')
+    if not compact:
+        links.append(f'<a class="btn ghost" href="{p}states/{slugify(w["state"])}.html">'
+                     f'{esc(w["state"])} data-center page</a>')
+    else:
+        links.append(f'<a class="btn ghost" href="{p}senate-winners.html#win-{st}">'
+                     f'All 2026 Senate winners &rarr;</a>')
+    parts.append(f'<p style="margin:10px 0 0">{" ".join(links)}</p>')
+    if compact:
+        return "".join(parts)
+    return (f'<section class="card" id="win-{st}" data-state="{esc(w["state"].lower())}" '
+            f'data-names="{esc(w["name"].lower())}" '
+            f'data-new="{"0" if w["sitting"] else "1"}" '
+            f'data-documented="{"1" if w["documented"] else "0"}">'
+            + "".join(parts) + '</section>')
+
+
+def _sw_table(rows):
+    order = {"guardrails": 0, "mixed": 1, "accelerate": 2, "consensus": 3}
+    out = []
+    for w in rows:
+        st = w["abbrev"].lower()
+        out.append([
+            (f'<a href="#win-{st}">{esc(w["state"])}</a>', w["state"]),
+            (f'<a href="#win-{st}"><strong>{esc(w["name"])}</strong></a>',
+             w["name"].split()[-1]),
+            (esc(w["party"]), w["party"]),
+            ("New" + (" · flipped" if w["flip"] else "") if not w["sitting"]
+             else "Re-elected", 0 if not w["sitting"] else 1),
+            (_sr_lean_badge(w) if w["items"] else
+             '<span class="muted">No record found</span>', order.get(w["lean"], 4)),
+            (str(len(w["actions"])) if w["actions"] else '<span class="muted">—</span>',
+             len(w["actions"])),
+            (str(len(w["statements"])) if w["statements"] else
+             '<span class="muted">—</span>', len(w["statements"])),
+            (esc(w["result"].get("vote_note") or "—"), w["result"].get("vote_note") or ""),
+        ])
+    return _sortable_table(
+        "sw-table",
+        [("State", "text"), ("Winner", "text"), ("Party", "text"),
+         ("Seat", "rank"), ("Lean", "rank"), ("Actions", "num"),
+         ("Statements", "num"), ("Margin", "text")],
+        out,
+        caption="One row per seat decided in 2026. Lean summarises only the "
+                "cited items; “No record found” is a gap, not a position. "
+                "Actions are bills, votes, letters and formal acts; statements "
+                "are quotes and campaign planks.")
+
+
+def _sw_handover(rows):
+    """The seats changing hands: the outgoing senator's documented lean next
+    to the incoming one's. Both columns are summaries of cited items only —
+    a blank on either side is a gap in the record, not a neutral position."""
+    import src.senators as sn
+    import src.race_common as rc
+    cur = {(s["state"], rc.norm(s["name"]).split()[-1]): s
+           for s in sn.senators(with_mentions=False)}
+
+    def badge(label, color):
+        return (f'<span class="gradebadge" style="background:{color};font-size:12px;'
+                f'padding:3px 9px">{esc(label)}</span>')
+
+    trs = ""
+    for w in rows:
+        if w["sitting"]:
+            continue
+        old = cur.get((w["abbrev"], rc.norm(w["seat_held_by"]).split()[-1]))
+        orec = (old or {}).get("record") or (old or {}).get("race")
+        ocell = (badge(orec["lean_label"], orec["lean_color"]) if orec else
+                 '<span class="muted">No record found</span>')
+        ncell = (badge(w["lean_label"], w["lean_color"]) if w["items"] else
+                 '<span class="muted">No record found</span>')
+        oname = (f'<a href="senators.html#sen-{esc(old["bioguide"].lower())}">'
+                 f'{esc(w["seat_held_by"])}</a>' if old else esc(w["seat_held_by"]))
+        trs += (f'<tr><td><a href="#win-{w["abbrev"].lower()}">{esc(w["state"])}</a></td>'
+                f'<td>{oname} <span class="muted">({esc(w["seat_held_party"])})</span></td>'
+                f'<td>{ocell}</td>'
+                f'<td><strong>{esc(w["name"])}</strong> '
+                f'<span class="muted">({esc(w["party"])})</span></td>'
+                f'<td>{ncell}</td></tr>')
+    return (f'<div class="table-scroll"><table><tr><th>State</th><th>Leaving</th>'
+            f'<th>Their record</th><th>Arriving</th><th>Their record</th></tr>'
+            f'{trs}</table></div>')
+
+
+def build_senate_winners():
+    """The 35 people who won a Senate seat in 2026, and what each has on the
+    record about data centers. Replaces the 117-candidate race tracker."""
+    import src.senate_winners as sw
+    import src.race_common as rc
+
+    rows = _sw_winners()
+    cov = sw.coverage(rows)
+    bl = cov["by_lean"]
+    new = [w for w in rows if not w["sitting"]]
+    back = [w for w in rows if w["sitting"]]
+
+    chips = (
+        f'<span class="stat"><b>{cov["winners"]}</b><span>seats decided</span></span>'
+        f'<span class="stat"><b>{cov["new"]}</b><span>new senators</span></span>'
+        f'<span class="stat"><b>{cov["flips"]}</b><span>seats that changed party</span></span>'
+        f'<span class="stat"><b>{cov["documented"]}</b><span>winners with a documented record</span></span>'
+        f'<span class="stat"><b>{cov["items"]}</b><span>cited items, {cov["actions"]} of them actions</span></span>')
+
+    def lean_row(label, group):
+        n = lambda k: sum(1 for w in group if w["lean"] == k)
+        return (f'<tr><td><strong>{esc(label)}</strong></td><td>{len(group)}</td>'
+                f'<td>{n("guardrails")}</td><td>{n("mixed")}</td><td>{n("accelerate")}</td>'
+                f'<td>{n("consensus") + n("unrecorded")}</td></tr>')
+
+    lean_table = (
+        '<div class="table-scroll"><table><tr><th></th><th>Winners</th><th>Guardrails</th>'
+        '<th>Mixed</th><th>Accelerate</th><th>No scored record</th></tr>'
+        + lean_row("New senators", new) + lean_row("Re-elected", back)
+        + lean_row("All 2026 winners", rows) + '</table></div>')
+
     legend = "".join(
         f'<li><span class="gradebadge" style="background:{color};font-size:12px;'
         f'padding:3px 9px">{esc(label)}</span> — {esc(desc)}</li>'
-        for k, (label, desc, color) in sr.LEANS.items()
-        if k != "consensus" or cov["consensus"])
-
-    consensus_chip = (
-        f'<span class="stat"><b>{cov["consensus"]}</b>'
-        f'<span>on the record only for the 417-3 House vote</span></span>'
-        if cov["consensus"] else "")
-    chips = (
-        f'<span class="stat"><b>{cov["races"]}</b><span>races on the ballot</span></span>'
-        f'<span class="stat"><b>{cov["candidates"]}</b><span>candidates filed</span></span>'
-        f'<span class="stat"><b>{cov["documented"]}</b><span>with a documented record</span></span>'
-        f'{consensus_chip}'
-        f'<span class="stat"><b>{cov["races_documented"]}</b><span>races where it is already a fight</span></span>')
+        for k, (label, desc, color) in rc.LEANS.items()
+        if k != "consensus" or bl["consensus"])
 
     jump = '<div class="statelist">' + "".join(
-        f'<a href="#race-{esc(r["abbrev"].lower())}">{esc(r["state"])}</a>'
-        for r in races) + "</div>"
+        f'<a href="#win-{w["abbrev"].lower()}">{esc(w["state"])}</a>'
+        for w in rows) + "</div>"
 
-    filt = """
-<div class="panel" style="margin:18px 0">
-  <label for="srq"><strong>Find your race</strong></label>
-  <input id="srq" type="search" placeholder="Type a state or a candidate name…"
-         style="width:100%;max-width:420px;padding:9px;margin-top:6px;
-                border-radius:8px;border:1px solid #2a3a55;background:#0b1220;
-                color:#eaf0f7" oninput="srFilter()">
-  <p class="muted" id="srcount" style="margin:8px 0 0"></p>
-</div>"""
+    uncertified = cov["winners"] - cov["certified"]
+    cert_note = (
+        f'<p class="note"><strong>{uncertified} of {cov["winners"]} results are '
+        f'recorded as called, not certified.</strong> A news organisation\'s call '
+        f'is not a state certification; each result below links the page it was '
+        f'read from and the date it was read.</p>' if uncertified else "")
 
     body = f"""
 <header>
-  <div class="kicker">2026 U.S. Senate</div>
-  <h1>Where your Senate candidates stand on AI data centers</h1>
-  <p class="sub">Data centers became a Senate campaign issue in 2026. This page
-  collects what every candidate on every 2026 Senate ballot has actually said or
-  done about them — each claim with the link behind it — so you can check the
-  people asking for your vote against the fight happening in your own county.</p>
+  <div class="kicker">U.S. Senate · elected 2026</div>
+  <h1>The 2026 Senate winners on AI data centers</h1>
+  <p class="sub">The election is over. Thirty-five Senate seats were decided,
+  and the people who won them will vote on federal siting, tax and ratepayer
+  bills for the next six years. This page is what each of them has actually
+  done and said about data centers — every claim with the link behind it — so
+  you can hold your senator to it.</p>
   <div class="stats">{chips}</div>
-  {_race_phase_banner(cov, "senator")}
+  {cert_note}
 </header>
 
-<div class="freshness"><p><strong>Most candidates have no record here, and that
-is the finding.</strong> {cov["documented"]} of {cov["candidates"]} filed
-candidates have a documented position on data centers; the other
-{cov["candidates"] - cov["documented"]} are shown as <em>no record found</em>
-rather than as neutral. If you have a source for one of them,
-<a href="#method">send it to us</a> — that is how this page grows.</p></div>
+<div class="freshness"><p><strong>Actions and promises are kept apart.</strong>
+A bill introduced or a vote cast is something a senator did. A campaign plank
+is something a candidate said while asking for the job — and {cov["new"]} of
+these {cov["winners"]} winners have never cast a Senate vote. Where a winner
+has nothing on the record, the page says <em>no record found</em>; it does not
+guess from party. Found something we missed? <a href="#method">Send it</a>.</p></div>
 
-{filt}
+<div class="panel" style="margin:18px 0">
+  <label for="swq"><strong>Find your senator</strong></label>
+  <input id="swq" type="search" placeholder="Type a state or a name…"
+         style="width:100%;max-width:420px;padding:9px;margin-top:6px;
+                border-radius:8px;border:1px solid #2a3a55;background:#0b1220;
+                color:#eaf0f7" oninput="swFilter()">
+  <label class="muted" style="display:block;margin-top:8px;font-size:13px">
+    <input type="checkbox" id="swnew" onchange="swFilter()"> Only new senators</label>
+  <p class="muted" id="swcount" style="margin:8px 0 0"></p>
+</div>
 {jump}
 
-<h2 id="table">Every candidate at a glance</h2>
+<h2 id="class">What the class of 2026 has on the record</h2>
+{lean_table}
+<p class="muted" style="font-size:13px">“No scored record” means nothing was
+located, or the only item is a near-unanimous House vote. A lean summarises
+the cited items below on one axis — does this person's documented position
+make data centers pay their own way and give host communities a say? It is
+not a grade.</p>
+
+<h2 id="table">Every winner at a glance</h2>
 {_records_cite_line()}
-{_sr_table(races)}
+{_sw_table(rows)}
 
-<h2 id="fights">Races where data centers are already an issue</h2>
-<p class="muted">{len(documented)} of {cov["races"]} races. Ordered by state.</p>
-{''.join(_sr_race_card(r) for r in documented)}
+<h2 id="handover">The {cov["new"]} seats changing hands</h2>
+<p class="muted">The senator leaving and the senator arriving, each with the
+lean of their own documented record. A change in the right-hand column is a
+change in what is on paper, not a forecast of a vote.</p>
+{_sw_handover(rows)}
 
-<h2 id="quiet">Races with no documented record yet</h2>
-<p class="muted">{len(quiet)} races. The candidates below have filed, but no
-statement or action of theirs on data centers has been located and sourced.
-That is a gap in the public record — or in our research — not a position.</p>
-{''.join(_sr_race_card(r) for r in quiet)}
+<h2 id="new">New senators</h2>
+<p class="muted">{len(new)} winners who were not sitting senators. Most of what
+is below is campaign record or a record from another office; none of it is a
+Senate vote yet.</p>
+{''.join(_sw_card(w) for w in new)}
+
+<h2 id="returning">Re-elected senators</h2>
+<p class="muted">{len(back)} sitting senators who kept their seats. Their Senate
+record and their 2026 campaign record are merged here, and the same record
+appears on <a href="senators.html">the page for all 100 senators</a>.</p>
+{''.join(_sw_card(w) for w in back)}
 
 <section id="method">
   <h2>How this page is built</h2>
-  <p><strong>The ballot roster is primary-sourced.</strong> Every race links to
-  the state election authority's own certified candidate list. Who is on the
-  ballot is a fact the state publishes, so that is where it is read from —
-  not from a wire round-up.</p>
-  <p><strong>Every claim carries its own link and date.</strong> A candidate's
-  position is a claim someone may repeat at a hearing or in a letter, so it
-  ships with the source that backs it and the date we read it.</p>
-  <p><strong>Silence is disclosed, never scored.</strong> {esc(sr.LEAN_NOTE)}</p>
+  <p><strong>Who won is read from the results file, never inferred.</strong>
+  Each result carries the page it was read from, the date, and whether it is
+  a call or a state certification.</p>
+  <p><strong>Every winner was researched again after the election.</strong>
+  Their own releases, congress.gov, state legislative and executive records,
+  and the reputable press were searched for bills, votes, vetoes, letters,
+  hearing questions and on-the-record statements about data centers, the
+  power bills and water they affect, and the tax breaks and siting rules
+  that govern them. Each item kept was opened at its source and confirmed to
+  name the winner doing or saying the thing. An item whose page could not be
+  opened was left out rather than published from a search snippet.</p>
+  <p><strong>Silence is disclosed, never scored.</strong> {esc(rc.LEAN_NOTE)}</p>
   <p><strong>This is not the officials scorecard.</strong> The
-  <a href="scorecard.html">A–F scorecard</a> grades sitting officials on
-  roll-call votes and signed laws, and <a href="senators.html">the senators
-  page</a> lists all 100 sitting senators, including the ones whose seats are
-  not on this ballot. Most people here are challengers whose whole
-  record is a campaign statement — much weaker evidence. A press release is a
-  promise, not an action, and this page will not launder one into the other,
-  which is why nobody here gets a letter grade.</p>
-  <h3>Tech &amp; utility campaign money</h3>
-  <p>Where a money line appears under a candidate, it counts committee (PAC)
-  receipts reported to the FEC whose contributing-committee name matches a
-  published term list — the list ships in
-  <code>scripts/fetch_senate_money.py</code>, and every matched committee is
-  written into the data file, so any figure here can be audited back to the
-  committees behind it. It <strong>undercounts by design</strong>: individual
-  contributions from company employees are not included, because the FEC
-  publishes no reliable employer-to-industry rollup. Read any total as a
-  floor. Figures quoted inside a candidate's record items above come from the
-  linked reporting instead, and are attributed there.</p>
-  {provenance_html("SENATE_RACES_2026")}
+  <a href="scorecard.html">A–F scorecard</a> grades sitting officials on a
+  documented action. A winner who already holds office may carry a grade
+  here; a newcomer cannot, because a campaign promise is not an action.</p>
+  <p><strong>Where the other 82 candidates went.</strong> Until the election
+  this address tracked all 117 filed candidates. The people who lost hold no
+  federal office and their campaign statements bind nobody, so the page now
+  covers the winners only. Sitting senators who lost keep their record on
+  <a href="senators.html">the senators page</a> until their term ends.</p>
+  {provenance_html("SENATE_WINNERS_2026")}
   <h3>Lean labels</h3>
   <ul>{legend}</ul>
   <h3>Found something we missed?</h3>
-  <p>A candidate statement, a bill, a vote, a local news story — send the link
-  and we will read it. <a href="about.html">Contact</a>.</p>
-  <p class="muted">Election day: {esc(sr.ELECTION_DATE)}. Rosters read
-  {esc(sr.ROSTER_AS_OF)}. Primaries still pending are flagged on the race.</p>
+  <p>A bill, a vote, a statement, a local news story — send the link and we
+  will read it. <a href="about.html">Contact</a>.</p>
 </section>
 
 <section>
   <h2>See also</h2>
   <ul>
-    <li><a href="house-races.html">2026 House races</a> — all 435 districts,
-      the other half of the federal ballot.</li>
-    <li><a href="scorecard.html">Officials scorecard</a> — A–F grades for
-      sitting members of Congress and governors, on their actual votes.</li>
-    <li><a href="moratoriums.html">Moratorium tracker</a> — what communities in
-      these states have already passed.</li>
+    <li><a href="senators.html">All 100 senators</a> — the sitting Senate,
+      with a letter, call script and meeting request for yours.</li>
+    <li><a href="house-races.html">2026 House races</a> — all 435 districts.</li>
+    <li><a href="scorecard.html">Officials scorecard</a> — A–F grades on
+      documented actions.</li>
+    <li><a href="moratoriums.html">Moratorium tracker</a> — what communities
+      in these states have already passed.</li>
     <li><a href="states/index.html">Your state page</a> — the data centers,
-      megawatts and rate pressure behind the race.</li>
-    <li><a href="bills.html">Your electric bill</a> — the mechanism most of
-      these candidates are arguing about.</li>
+      megawatts and rate pressure behind the result.</li>
   </ul>
 </section>
 
 <script>
-function srFilter(){{
-  var q=(document.getElementById('srq').value||'').toLowerCase().trim();
+function swFilter(){{
+  var q=(document.getElementById('swq').value||'').toLowerCase().trim();
+  var nw=document.getElementById('swnew').checked;
   var cards=document.querySelectorAll('section.card[data-state]'),n=0;
   cards.forEach(function(c){{
-    var hit=!q||c.dataset.state.indexOf(q)>-1||c.dataset.names.indexOf(q)>-1;
+    var hit=(!q||c.dataset.state.indexOf(q)>-1||c.dataset.names.indexOf(q)>-1)
+            &&(!nw||c.dataset.new==='1');
     c.style.display=hit?'':'none'; if(hit)n++;
   }});
-  document.getElementById('srcount').textContent=
-    q?(n+' race'+(n===1?'':'s')+' match “'+q+'”'):'';
+  document.getElementById('swcount').textContent=
+    (q||nw)?(n+' winner'+(n===1?'':'s')+' shown'):'';
 }}
 </script>"""
 
     return page(
-        "2026 Senate candidates on AI data centers — AI GridWatch",
-        "Every 2026 U.S. Senate candidate's documented position on AI data "
-        "centers, sourced claim by claim, with the ballot roster read from each "
-        "state's own certified candidate list.",
-        body, f"{SITE_URL}/senate-races",
+        "2026 Senate winners on AI data centers — AI GridWatch",
+        "What each of the 35 senators elected in 2026 has done and said about "
+        "AI data centers, power bills and local control — actions and campaign "
+        "promises kept apart, every claim sourced.",
+        body, f"{SITE_URL}/senate-winners",
         jsonld=_breadcrumb(("Home", SITE_URL),
-                           ("Senate races 2026", f"{SITE_URL}/senate-races")))
+                           ("Senate winners 2026", f"{SITE_URL}/senate-winners")))
 
 
 def _race_phase_banner(cov, what):
@@ -13698,8 +13862,8 @@ none has been located. Click a linked district to jump to its card.</p>
 <section>
   <h2>See also</h2>
   <ul>
-    <li><a href="senate-races.html">2026 Senate races</a> — the other half of
-      the federal ballot.</li>
+    <li><a href="senate-winners.html">2026 Senate winners</a> — the 35 people
+      who won the other half of the federal ballot.</li>
     <li><a href="senators.html">All 100 senators</a> — the sitting Senate,
       not just the seats on the ballot.</li>
     <li><a href="scorecard.html">Officials scorecard</a> — A–F grades for
@@ -13758,8 +13922,7 @@ def _sen_block(s):
     """
     rank = "senior" if s.get("state_rank") == "senior" else "junior"
     if s["on_ballot_2026"]:
-        when = (f'<a href="senate-races.html#race-{esc(s["state"].lower())}">'
-                f'on the 2026 ballot</a>')
+        when = _sen_2026_outcome(s)
     else:
         when = f'next on the ballot {s["next_election"]}'
     stance = s.get("stance")
@@ -14180,7 +14343,7 @@ def build_legislation():
   executive orders. Municipal and county ordinances (like moratoriums) are tracked
   on our <a href="moratoriums.html">moratorium tracker</a> instead.</p>
   <p>See also: <a href="moratoriums.html">Moratorium tracker</a> ·
-  <a href="senate-races.html">Senate races 2026</a> ·
+  <a href="senate-winners.html">Senate winners 2026</a> ·
   <a href="house-races.html">House races 2026</a></p>
 </section>
 
@@ -14290,8 +14453,8 @@ def build_senators():
   <h1>Where every U.S. senator stands on AI data centers</h1>
   <p class="sub">All 100 sitting senators, two per state, with what each has
   actually done or said about data centers — each claim with the link behind
-  it. The <a href="senate-races.html">2026 race tracker</a> covers only the 35
-  seats on this year's ballot; federal siting, tax and ratepayer bills get
+  it. The <a href="senate-winners.html">2026 winners page</a> covers the 35
+  seats decided this year; federal siting, tax and ratepayer bills get
   voted on by all 100, and two of them are yours.</p>
   <div class="stats">{chips}</div>
 </header>
@@ -14361,8 +14524,8 @@ source for one of them, <a href="#method">send it to us</a>.</p></div>
 <section>
   <h2>See also</h2>
   <ul>
-    <li><a href="senate-races.html">2026 Senate races</a> — every candidate on
-      the 35 ballots, challengers included.</li>
+    <li><a href="senate-winners.html">2026 Senate winners</a> — the 35 seats
+      decided this year, including the senators-elect not yet on this page.</li>
     <li><a href="house-races.html">2026 House races</a> — the other chamber.</li>
     <li><a href="scorecard.html">Officials scorecard</a> — the same grades,
       plus governors and House members.</li>
@@ -17210,7 +17373,11 @@ def main():
                                              _hr_mod.HOUSE_RACES_2026)
     if _res_problems:
         raise SystemExit("election results invalid:\n  " + "\n  ".join(_res_problems[:20]))
-    (WEB / "senate-races.html").write_text(build_senate_races(), encoding="utf-8")
+    import src.senate_winners as _sw_mod
+    _sw_problems = _sw_mod.validate()
+    if _sw_problems:
+        raise SystemExit("senate winner records invalid:\n  " + "\n  ".join(_sw_problems[:20]))
+    (WEB / "senate-winners.html").write_text(build_senate_winners(), encoding="utf-8")
     (WEB / "senators.html").write_text(build_senators(), encoding="utf-8")
     (WEB / "house-races.html").write_text(build_house_races(), encoding="utf-8")
     if _LEGISLATION_READY:
@@ -17287,7 +17454,7 @@ def main():
              "learn", "puc", "executives", "about", "search", "dividend",
              "data-centers", "environment", "studies", "complaints",
              "cba-clauses", "clean-energy-laws", "officials", "case-studies",
-             "community-value", "open-data", "senate-races", "senators", "house-races",
+             "community-value", "open-data", "senate-winners", "senators", "house-races",
              "hearing-questions", "opposition", "glossary", "tax-breaks", "siting",
              "companies/", "states/", "blog/", "news/", "videos", "map",
              "changes",

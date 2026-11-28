@@ -39,6 +39,7 @@ sys.path.insert(0, str(ROOT))
 
 from src import race_common as rc                       # noqa: E402
 import src.senate_races as senate                       # noqa: E402
+from src.senate_winner_records import WINNER_RECORDS    # noqa: E402
 import src.house_races as house                         # noqa: E402
 
 UA = {"User-Agent": "Mozilla/5.0 (compatible; GridWatchAI-linkcheck/1.0)"}
@@ -81,8 +82,14 @@ def check(url, timeout=20):
 
 
 def all_records():
+    # The winners' merged records are what the site publishes now; the
+    # campaign archive is still rendered for sitting senators who lost,
+    # until their terms end, so both are audited.
+    for k, v in WINNER_RECORDS.items():
+        if v.get("items"):
+            yield "senate", k[0], k[-1], v
     for k, v in senate.AI_RECORDS.items():
-        yield "senate", k[0], k[-1], v
+        yield "senate-archive", k[0], k[-1], v
     for k, v in house.AI_RECORDS.items():
         yield "house", f"{k[0]}-{k[1]}", k[-1], v
 

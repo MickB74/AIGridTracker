@@ -125,7 +125,7 @@ jobs:
       - name: Scan for candidate data-center records
         run: python scripts/scan_candidate_records.py
 
-      # Re-checks every URL already cited on senate-races/house-races and every
+      # Re-checks every URL already cited on senate-winners/house-races and every
       # record whose as_of has gone stale. Non-blocking on purpose: a dead
       # outlet link is a chore, and a red X on the daily job gets trained away.
       # The signal is the committed diff in data/candidate_review.md.

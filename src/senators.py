@@ -22,9 +22,13 @@ record tables the site already maintains, so one fact lives in one place:
 * `src/senator_records.py` — the researched record for sitting senators:
   bills, letters, hearing questions and on-the-record statements, each with
   its own source and date and a `kind` (action vs statement).
-* `src/senate_races.py::AI_RECORDS` — campaign-time items for the incumbents
-  on the 2026 ballot, with per-item source and date. A campaign statement
-  is a promise, not an action, so it is shown as such and never graded.
+* `src/senate_winner_records.py` — the merged record of every senator who
+  won in 2026 (office, campaign and since). Read first: a re-elected senator
+  has one record on the site, not two.
+* `src/senate_races.py::AI_RECORDS` — the frozen campaign-time archive. Only
+  used now for a sitting senator who was on the 2026 ballot and did *not*
+  win, until their term ends. A campaign statement is a promise, not an
+  action, so it is shown as such and never graded.
 
 Roster: data/senators.json, refreshed by scripts/refresh_senators.py from the
 @unitedstates congress-legislators dataset. It carries the one fact
@@ -88,13 +92,22 @@ def _race_record(state, name):
 
 
 def senators(with_mentions=True):
+    from src import senate_winners as sw
     rows, generated, src, src_name = _load()
     archive = rc.load_story_archive() if with_mentions else []
     out = []
     for s in rows:
         stance = _stance(s["state"], s["name"])
-        race = _race_record(s["state"], s["name"]) if s["next_election"] == 2026 else None
-        rec = SENATOR_RECORDS.get((s["state"], s["name"]))
+        # A senator who won in 2026 has one merged record, in
+        # src/senate_winner_records.py — office, campaign and since. It
+        # replaces both the researched record and the campaign record here,
+        # so the two cannot drift apart.
+        won = sw.record_for(s["state"], s["name"])
+        if won and not won.get("items"):
+            won = None
+        race = (_race_record(s["state"], s["name"])
+                if s["next_election"] == 2026 and not won else None)
+        rec = won or SENATOR_RECORDS.get((s["state"], s["name"]))
         record = None
         if rec:
             record = {"lean": rec["lean"], "lean_label": rc.LEANS[rec["lean"]][0],

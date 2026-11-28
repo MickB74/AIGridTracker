@@ -1358,7 +1358,7 @@ been built. They show where the pressure is, not what will happen.
                  "South Carolina", "Maine", "Michigan", "ratepayers", "accountability"],
         "summary": "All 35 Senate races on the 2026 ballot now have a called winner. Thirteen of those winners left a documented position on data centers during the campaign, and twelve of the thirteen promised some version of the same thing: data centers pay their own way. This post lists who promised what, with the source for each, and what none of it guarantees.",
         "body": """All 35 U.S. Senate races on the Nov. 3 ballot now have a called winner, and our
-[Senate race tracker](/senate-races.html) records each one with the page the
+[Senate winners page](/senate-winners.html) records each one with the page the
 result was read from. The Associated Press count stands at
 [56 Democratic seats to 44 Republican, with nine seats changing party](https://www.adn.com/politics/2026/11/17/democrat-mary-peltola-wins-us-senate-race-in-alaska-beating-incumbent-republican-dan-sullivan/),
 which AP describes as the most flips since 1958.
@@ -1500,7 +1500,7 @@ sentence they published during the campaign and the link to it.
 
 ## See also
 
-- [2026 Senate race tracker](/senate-races.html): every race, every result,
+- [2026 Senate winners](/senate-winners.html): every seat, every result,
   every cited position.
 - [All 100 senators](/senators.html), including the ones who were not on
   this ballot, with a letter generator for writing to yours.
@@ -6147,8 +6147,8 @@ becomes real in the room where the vote happens. Bring a copy.
 *See also: [Moratorium tracker](/moratoriums.html) —
 what other communities have enacted, with sources and expiry dates ·
 [Start here](/start-here.html) — a three-week plan for a zoning fight ·
-[2026 Senate races](/senate-races.html) — where candidates stand on making
-data centers pay their own way.*
+[2026 Senate winners](/senate-winners.html) — where the senators elected in
+2026 stand on making data centers pay their own way.*
 
 *This piece links to primary documents and to reporting from Axios, The Hill,
 Forbes, the Texas Tribune, Utility Dive, POWER Magazine, NOTUS, Brookings,

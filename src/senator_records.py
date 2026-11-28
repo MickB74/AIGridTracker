@@ -15,6 +15,10 @@ Items dropped in curation, so nobody re-adds them: Sen. Sheehy's X post
 position), and Sen. Risch's ARC Act release (the data-center language there
 is from endorsing groups, not the senator), and Sen. Kaine's press-availability
 quote as carried by Blue Virginia (a partisan blog; his E&E News quote stands).
+
+Senators re-elected in 2026 are not in this table: their
+records moved to src/senate_winner_records.py, which src/senators.py reads
+first, so each has one record on the site rather than two.
 """
 
 SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
@@ -196,49 +200,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                                     'hearing)',
                                      'kind': 'statement'}],
                           'as_of': '2026-09-05'},
- ('AR', 'Tom Cotton'): {'lean': 'mixed',
-                        'summary': 'Cotton introduced the DATA Act of 2026 to let data '
-                                   'centers and other energy-intensive industries '
-                                   'build off-grid electricity systems exempt from '
-                                   'certain Federal Power Act regulation so their load '
-                                   "does not raise Arkansans' bills, and in June 2026 "
-                                   'asked DOJ to investigate alleged Chinese-backed '
-                                   'funding of opposition to data center development '
-                                   "while acknowledging residents' cost and resource "
-                                   'concerns are valid.',
-                        'items': [{'what': 'Introduced the DATA Act of 2026, which '
-                                           'would exempt new isolated electricity '
-                                           'generation and supply systems built to '
-                                           'serve new loads (manufacturers, data '
-                                           'centers and other energy-intensive '
-                                           'industries) from certain federal '
-                                           'regulation so they can operate independent '
-                                           'of the existing grid. Cotton: "American '
-                                           'dominance in artificial intelligence and '
-                                           'other crucial emerging industries should '
-                                           'not come at the expense of Arkansans '
-                                           'paying higher energy costs."',
-                                   'date': '2026-01-08',
-                                   'source': 'https://www.cotton.senate.gov/news/press-releases/cotton-introduces-bill-to-lower-energy-costs-for-arkansans',
-                                   'source_name': 'Sen. Cotton press release',
-                                   'kind': 'action'},
-                                  {'what': 'Wrote Acting Attorney General Todd Blanche '
-                                           'asking DOJ to investigate alleged Chinese '
-                                           'Communist Party-linked funding of U.S. '
-                                           'nonprofits producing anti-data-center '
-                                           'content, while stating "Americans '
-                                           'certainly have valid concerns about '
-                                           'potential rising energy costs and strains '
-                                           'on natural resources related to data '
-                                           'centers" but "we can\'t allow any effort '
-                                           'by foreign adversaries to extort these '
-                                           'fears and undermine our technological '
-                                           'development."',
-                                   'date': '2026-06-10',
-                                   'source': 'https://www.cotton.senate.gov/news/press-releases/cotton-to-doj-investigate-communist-china-influence-on-data-center-development',
-                                   'source_name': 'Sen. Cotton press release',
-                                   'kind': 'action'}],
-                        'as_of': '2026-09-05'},
  ('AZ', 'Ruben Gallego'): {'lean': 'guardrails',
                            'summary': 'Gallego calls data centers a "necessary evil" '
                                       'for AI competition but says residents "should '
@@ -357,10 +318,10 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                             'summary': 'Co-signed a November 2025 letter to FERC on '
                                        'data center rate hikes, then introduced the '
                                        'Energy Cost Fairness and Reliability Act in '
-                                       'May 2026 to make large-load facilities pay 100% '
-                                       'of the grid upgrades needed to serve them, show '
-                                       'demand flexibility and bring their own '
-                                       'generation before connecting.',
+                                       'May 2026 to make large-load facilities pay '
+                                       '100% of the grid upgrades needed to serve '
+                                       'them, show demand flexibility and bring their '
+                                       'own generation before connecting.',
                             'items': [{'what': 'Introduced the Energy Cost Fairness '
                                                'and Reliability Act: large-load '
                                                'facilities pay 100% of network upgrade '
@@ -382,9 +343,9 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                                'Van Hollen, Warren, Welch, Blumenthal '
                                                'and Warnock to FERC Chair Laura Swett '
                                                'urging the agency to ensure increased '
-                                               'energy demand from data centers does not '
-                                               'result in unjust or unreasonable rate '
-                                               'hikes for American households.',
+                                               'energy demand from data centers does '
+                                               'not result in unjust or unreasonable '
+                                               'rate hikes for American households.',
                                        'date': '2025-11-17',
                                        'source': 'https://www.schiff.senate.gov/news/press-releases/news-sen-schiff-joins-sen-markey-colleagues-in-urging-federal-energy-regulator-to-prevent-data-centers-from-dramatically-hiking-energy-costs-for-american-families/',
                                        'source_name': 'Sen. Schiff press release',
@@ -480,36 +441,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                                           'release',
                                            'kind': 'action'}],
                                 'as_of': '2026-09-05'},
- ('DE', 'Christopher A. Coons'): {'lean': 'mixed',
-                                  'summary': 'Coons introduced the Liquid Cooling for '
-                                             'AI Act with Sen. McCormick in November '
-                                             '2025, directing GAO and DOE to assess '
-                                             "liquid cooling to cut data centers' "
-                                             'electricity and water use, saying AI '
-                                             'leadership "shouldn\'t have to mean '
-                                             'skyrocketing energy bills for American '
-                                             'families."',
-                                  'items': [{'what': 'Introduced the Liquid Cooling '
-                                                     'for AI Act (with Sen. Dave '
-                                                     'McCormick): GAO to assess R&D '
-                                                     'needs for liquid cooling in data '
-                                                     'centers, DOE to report '
-                                                     'recommendations, and an industry '
-                                                     'advisory body; the release cites '
-                                                     "LBNL's finding that data centers "
-                                                     'used 4.4% of U.S. electricity in '
-                                                     '2023 and could reach 12.8% by '
-                                                     '2028. Coons: "Leading the world '
-                                                     "in AI innovation shouldn't have "
-                                                     'to mean skyrocketing energy '
-                                                     'bills for American families or '
-                                                     'giving up ground in the fight '
-                                                     'against climate change."',
-                                             'date': '2025-11-20',
-                                             'source': 'https://www.coons.senate.gov/news/press-releases/senators-coons-mccormick-introduce-bill-to-boost-us-ai-leadership-with-energy-efficient-liquid-cooling-technology',
-                                             'source_name': 'Sen. Coons press release',
-                                             'kind': 'action'}],
-                                  'as_of': '2026-09-05'},
  ('FL', 'Rick Scott'): {'lean': 'guardrails',
                         'summary': 'Scott introduced a concurrent resolution '
                                    '(S.Con.Res.30) with Sen. Marshall endorsing the '
@@ -533,32 +464,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                    'date': '2026-04-02',
                                    'source': 'https://www.rickscott.senate.gov/2026/4/sens-rick-scott-roger-marshall-introduce-resolution-supporting-pres-trump-s-ratepayer-protection-pledge',
                                    'source_name': 'Sen. Rick Scott press release',
-                                   'kind': 'action'}],
-                        'as_of': '2026-09-05'},
- ('GA', 'Jon Ossoff'): {'lean': 'guardrails',
-                        'summary': "Ossoff's April 2026 letter to FERC Chair Laura "
-                                   'Swett asked how the agency will ensure tech '
-                                   'companies "pay their own way" and what it will do '
-                                   'if data center construction raises utility costs '
-                                   'beyond forecasts, with a response requested by '
-                                   'June 1, 2026.',
-                        'items': [{'what': 'Sent a letter to FERC Chairman Laura Swett '
-                                           'opening an inquiry into whether AI data '
-                                           "center growth is raising Georgians' power "
-                                           'bills, asking how FERC will ensure '
-                                           'technology companies "pay their own way" '
-                                           'and what it will do if data center '
-                                           'construction raises utility costs beyond '
-                                           "predictions; cited the Georgia PSC's "
-                                           'December 2025 approval of 9,885 MW of new '
-                                           'Georgia Power generation for large loads '
-                                           'and said Georgians are "suffering from '
-                                           'sky-high power bills." Response requested '
-                                           'by June 1, 2026. Georgia PSC commissioners '
-                                           'publicly disputed the premise.',
-                                   'date': '2026-04-20',
-                                   'source': 'https://www.cbsnews.com/atlanta/news/ossoff-investigating-ai-data-center-are-impacting-rising-power-bills-in-georgia/',
-                                   'source_name': 'CBS News Atlanta',
                                    'kind': 'action'}],
                         'as_of': '2026-09-05'},
  ('GA', 'Raphael G. Warnock'): {'lean': 'guardrails',
@@ -708,26 +613,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                                   'release',
                                    'kind': 'statement'}],
                         'as_of': '2026-09-05'},
- ('ID', 'James E. Risch'): {'lean': 'accelerate',
-                            'summary': "Risch welcomed Meta's Kuna data center in 2022 "
-                                       'as a source of jobs and in 2026 co-introduced '
-                                       'the ARC Act, a nuclear cost-overrun program '
-                                       'his office promotes as answering '
-                                       'data-center-driven power demand.',
-                            'items': [{'what': 'Statement in the Idaho Commerce '
-                                               "announcement of Meta's Kuna data "
-                                               "center: 'The creation of new jobs is "
-                                               'of utmost importance in a community '
-                                               'growing as rapidly as the Treasure '
-                                               "Valley,' saying the center 'will "
-                                               'provide hardworking Idahoans with '
-                                               "good-paying jobs.'",
-                                       'date': '2022-02-16',
-                                       'source': 'https://commerce.idaho.gov/press/meta-announces-kuna-as-location-of-new-data-center/',
-                                       'source_name': 'Idaho Department of Commerce '
-                                                      'press release',
-                                       'kind': 'statement'}],
-                            'as_of': '2026-09-05'},
  ('IL', 'Richard J. Durbin'): {'lean': 'guardrails',
                                'summary': 'In March 2026 Durbin introduced the Data '
                                           'Center Water and Energy Transparency Act '
@@ -845,69 +730,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                                     'Yahoo News)',
                                      'kind': 'statement'}],
                           'as_of': '2026-09-05'},
- ('MA', 'Edward J. Markey'): {'lean': 'guardrails',
-                              'summary': 'Markey has released a discussion draft '
-                                         'requiring federal certification of data '
-                                         'centers, reintroduced the AI Environmental '
-                                         'Impacts Act, and led letters to ISO New '
-                                         'England and state utility regulators asking '
-                                         'them to shield ratepayers from data center '
-                                         'costs.',
-                              'items': [{'what': 'Led a letter from six New England '
-                                                 'senators to ISO New England asking '
-                                                 'how it will protect residential '
-                                                 'ratepayers from price increases '
-                                                 'driven by data center expansion. '
-                                                 "Markey: 'As the ones who stand to "
-                                                 'benefit most, the '
-                                                 'multi-billion-dollar AI industry '
-                                                 'should be responsible for these '
-                                                 "costs.'",
-                                         'date': '2026-01-28',
-                                         'source': 'https://www.markey.senate.gov/news/press-releases/markey-welch-new-england-senators-call-for-answers-about-how-new-regional-data-centers-will-drive-up-energy-costs-for-consumers',
-                                         'source_name': 'Sen. Markey press release',
-                                         'kind': 'action'},
-                                        {'what': 'Led a letter with Sens. Blumenthal, '
-                                                 'Van Hollen and Booker to the '
-                                                 'president of NARUC urging state '
-                                                 'utility commissions to reject rate '
-                                                 'filings that shift data center costs '
-                                                 'onto households and small '
-                                                 'businesses.',
-                                         'date': '2026-03-06',
-                                         'source': 'https://www.markey.senate.gov/news/press-releases/senator-markey-colleagues-call-for-state-energy-regulators-to-protect-ratepayers-from-data-center-related-cost-hikes',
-                                         'source_name': 'Sen. Markey press release',
-                                         'kind': 'action'},
-                                        {'what': 'Reintroduced with Rep. Beyer the AI '
-                                                 'Environmental Impacts Act of 2026, '
-                                                 'requiring AI data centers to report '
-                                                 'environmental and energy impacts '
-                                                 'with fines for non-compliance, NIST '
-                                                 'measurement standards, and an EPA '
-                                                 'lifecycle study.',
-                                         'date': '2026-06-09',
-                                         'source': 'https://www.markey.senate.gov/news/press-releases/senator-markey-rep-beyer-reintroduce-ai-environmental-impacts-act',
-                                         'source_name': 'Sen. Markey press release',
-                                         'kind': 'action'},
-                                        {'what': 'Released a discussion draft of the '
-                                                 'Protecting Communities from Data '
-                                                 'Center Impacts Act, which would '
-                                                 'require a federal public-interest '
-                                                 'certificate before a data center is '
-                                                 'permitted, set minimum energy, '
-                                                 'environmental and economic '
-                                                 'standards, and fund community '
-                                                 'monitoring grants. Markey: '
-                                                 "'Communities are organizing and "
-                                                 'demanding action to protect their '
-                                                 'air, water, energy bills, and '
-                                                 'quality of life from the tsunami of '
-                                                 "data centers around the country.'",
-                                         'date': '2026-07-13',
-                                         'source': 'https://www.markey.senate.gov/news/press-releases/senator-markey-releases-discussion-draft-of-legislation-to-create-a-national-framework-to-address-data-center-harm',
-                                         'source_name': 'Sen. Markey press release',
-                                         'kind': 'action'}],
-                              'as_of': '2026-09-05'},
  ('MA', 'Elizabeth Warren'): {'lean': 'guardrails',
                               'summary': 'Warren opened an investigation into whether '
                                          "Big Tech data centers are raising families' "
@@ -1392,26 +1214,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                     'source_name': 'Sen. Hoeven press release',
                                     'kind': 'statement'}],
                          'as_of': '2026-09-05'},
- ('NE', 'Pete Ricketts'): {'lean': 'mixed',
-                           'summary': 'Says data-center decisions should be governed '
-                                      'by local control and that communities should '
-                                      'negotiate protections for power rates, water, '
-                                      'and tax payments before approving projects.',
-                           'items': [{'what': 'At the Nebraska State Fair U.S. Senate '
-                                              'debate said "when it comes to data '
-                                              'centers, local control is the name of '
-                                              'the game," that communities "should '
-                                              'negotiate first" and are "in the '
-                                              'driver\'s seat," and should insist "you '
-                                              "shouldn't impact my power rates. You "
-                                              'should conserve water - closed-loop '
-                                              'systems," then ask for more in property '
-                                              'taxes.',
-                                      'date': '2026-09-01',
-                                      'source': 'https://nebraskapublicmedia.org/en/news/news-articles/money-power-take-center-stage-during-ricketts-and-osborns-state-fair-debate/',
-                                      'source_name': 'Nebraska Public Media',
-                                      'kind': 'statement'}],
-                           'as_of': '2026-09-05'},
  ('NH', 'Jeanne Shaheen'): {'lean': 'guardrails',
                             'summary': "Signed a New England senators' letter asking "
                                        'ISO New England how it will protect '
@@ -1430,44 +1232,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                        'date': '2026-01-23',
                                        'source': 'https://www.shaheen.senate.gov/news/press/shaheen-joins-colleagues-in-searching-for-answers-about-how-new-regional-data-centers-will-drive-up-energy-costs-for-new-england-communities',
                                        'source_name': 'Sen. Shaheen press release',
-                                       'kind': 'action'}],
-                            'as_of': '2026-09-05'},
- ('NJ', 'Cory A. Booker'): {'lean': 'guardrails',
-                            'summary': 'Beyond cosponsoring the Power for the People '
-                                       'Act, Booker signed a March 2026 letter asking '
-                                       'state utility regulators to reject rate '
-                                       'filings that make ratepayers subsidize data '
-                                       'centers and co-led a May 2025 letter pressing '
-                                       'PJM on the data-center-driven capacity price '
-                                       'increase.',
-                            'items': [{'what': 'Signed a letter with Sens. Markey, '
-                                               'Blumenthal and Van Hollen to NARUC '
-                                               'president Ann Rendahl urging state '
-                                               'public utility commissions to reject '
-                                               'rate filings that force residential '
-                                               'and small-business ratepayers to '
-                                               'subsidize AI data centers and to adopt '
-                                               'protective policies coordinated with '
-                                               'utilities, grid operators and federal '
-                                               'regulators.',
-                                       'date': '2026-03-06',
-                                       'source': 'https://www.markey.senate.gov/news/press-releases/senator-markey-colleagues-call-for-state-energy-regulators-to-protect-ratepayers-from-data-center-related-cost-hikes',
-                                       'source_name': 'Sen. Markey press release',
-                                       'kind': 'action'},
-                                      {'what': 'Co-led, with Sen. Andy Kim and seven '
-                                               'NJ House members, a letter to PJM '
-                                               'Interconnection ahead of a ~17% June '
-                                               '2025 rate increase; the letter says '
-                                               'the 2024 capacity auction results '
-                                               '"reflect the growing demand on the '
-                                               'grid from data centers and advanced '
-                                               'computer technology" and asks PJM what '
-                                               'it is doing to lower rates, speed '
-                                               'interconnection and prevent future '
-                                               'price spikes.',
-                                       'date': '2025-05-02',
-                                       'source': 'https://www.kim.senate.gov/press_release/kim-booker-lead-members-of-nj-congressional-delegation-in-letter-to-pjm-interconnection-pjm-raising-serious-concerns-over-rate-increase-impacting-new-jersey-families/',
-                                       'source_name': 'Sen. Kim press release',
                                        'kind': 'action'}],
                             'as_of': '2026-09-05'},
  ('NJ', 'Andy Kim'): {'lean': 'mixed',
@@ -1564,25 +1328,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                         'source_name': 'Sen. Heinrich press release',
                                         'kind': 'action'}],
                              'as_of': '2026-09-05'},
- ('NM', 'Ben Ray Luján'): {'lean': 'guardrails',
-                           'summary': 'Introduced a bipartisan bill creating a 30% tax '
-                                      'credit for onsite water-recycling systems at '
-                                      'industrial facilities, explicitly including '
-                                      'data centers.',
-                           'items': [{'what': 'Introduced with Sen. Katie Britt the '
-                                              'Advancing Water Reuse Act, a 30% '
-                                              'investment tax credit for onsite water '
-                                              'recycling systems at "manufacturing, '
-                                              'food processing, and other industrial '
-                                              'entities, including data center '
-                                              'facilities," to replace '
-                                              'freshwater/groundwater draws with '
-                                              'recycled water.',
-                                      'date': '2026-05-13',
-                                      'source': 'https://www.lujan.senate.gov/newsroom/press-releases/lujan-britt-unveil-bipartisan-bill-to-boost-industrial-water-reuse-protect-community-drinking-water-and-meet-public-and-private-demand-for-freshwater/',
-                                      'source_name': 'Sen. Luján press release',
-                                      'kind': 'action'}],
-                           'as_of': '2026-09-05'},
  ('NV', 'Catherine Cortez Masto'): {'lean': 'guardrails',
                                     'summary': 'Requested FY2027 earmark funding for a '
                                                'Desert Research Institute tool to help '
@@ -1751,27 +1496,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                        'source_name': 'Oklahoma Energy Today',
                                        'kind': 'statement'}],
                             'as_of': '2026-09-05'},
- ('OR', 'Jeff Merkley'): {'lean': 'guardrails',
-                          'summary': "With Sen. Wyden, wrote Gov. Kotek's data center "
-                                     'advisory committee listing constituent concerns '
-                                     'about energy demand, consumer electricity costs, '
-                                     'water, noise, farmland rezoning and tribal '
-                                     'consultation.',
-                          'items': [{'what': 'Co-signed with Sen. Wyden a letter to '
-                                             "Gov. Tina Kotek's Oregon Data Center "
-                                             'Advisory Committee asking it to consider '
-                                             'rising energy demand, increased '
-                                             'electricity costs for consumers, water '
-                                             'quantity and quality, steam and noise '
-                                             'from cooling, rezoning of agricultural '
-                                             'land, tribal treaty consultation, and '
-                                             'public transparency on environmental and '
-                                             'infrastructure impacts.',
-                                     'date': '2026-07-02',
-                                     'source': 'https://www.merkley.senate.gov/wyden-merkley-ask-state-data-center-advisory-committee-to-consider-multiple-issues-raised-by-oregonians/',
-                                     'source_name': 'Sen. Merkley press release',
-                                     'kind': 'action'}],
-                          'as_of': '2026-09-05'},
  ('OR', 'Ron Wyden'): {'lean': 'guardrails',
                        'summary': 'Pressed Google, Apple, Meta and Amazon on '
                                   'data-center water use, co-signed a letter to '
@@ -1887,24 +1611,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                                        'McCormick site)',
                                         'kind': 'statement'}],
                              'as_of': '2026-09-05'},
- ('RI', 'Jack Reed'): {'lean': 'guardrails',
-                       'summary': "Co-led a New England senators' letter asking ISO "
-                                  'New England how it will shield residential '
-                                  'ratepayers from data-center-driven price increases.',
-                       'items': [{'what': 'With Sen. Whitehouse, Sen. Welch and three '
-                                          'other New England senators, wrote ISO New '
-                                          'England CEO Vamsi Chadalavada asking what '
-                                          'strategies the grid operator will use to '
-                                          'protect residential customers from '
-                                          'data-center-driven price increases; Reed '
-                                          'said "We believe it is necessary to require '
-                                          'tech companies, not American families, to '
-                                          'foot the bill for their load."',
-                                  'date': '2026-01-28',
-                                  'source': 'https://www.reed.senate.gov/news/releases/reed-and-whitehouse-seek-answers-about-how-new-regional-data-centers-could-drive-up-energy-health_environmental-costs-for-consumers',
-                                  'source_name': 'Sen. Reed press release',
-                                  'kind': 'action'}],
-                       'as_of': '2026-09-05'},
  ('RI', 'Sheldon Whitehouse'): {'lean': 'guardrails',
                                 'summary': 'Co-led the January 2026 ISO New England '
                                            'letter on data-center-driven rate '
@@ -1985,25 +1691,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                                  'Scott)',
                                   'kind': 'statement'}],
                        'as_of': '2026-09-05'},
- ('SD', 'Mike Rounds'): {'lean': 'mixed',
-                         'summary': 'Told KOTA that data centers should go only where '
-                                    'local residents actively welcome them, and '
-                                    'predicted most new data centers will eventually '
-                                    'be built in space.',
-                         'items': [{'what': 'In a KOTA Territory TV interview on Rapid '
-                                            'City data-center backlash and a proposed '
-                                            'EPA permit change, Rounds said data '
-                                            'centers must go only where they are '
-                                            'actively welcomed by local populations '
-                                            'and must remain grounded in extensive '
-                                            'discussion with local residents; he added '
-                                            'that long-term most new data centers will '
-                                            'probably be based in space.',
-                                    'date': '2026-09-05',
-                                    'source': 'https://www.kotatv.com/2026/09/05/rapid-city-data-center-backlash-epa-rules-meta-cash-space-tech/',
-                                    'source_name': 'KOTA Territory TV',
-                                    'kind': 'statement'}],
-                         'as_of': '2026-09-05'},
  ('SD', 'John Thune'): {'lean': 'mixed',
                         'summary': 'Says data centers should be self-sufficient in '
                                    'power and should not be built where there is no '
@@ -2096,26 +1783,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                          'source_name': 'Nashville Banner',
                                          'kind': 'statement'}],
                               'as_of': '2026-09-05'},
- ('TN', 'Bill Hagerty'): {'lean': 'guardrails',
-                          'summary': 'Said in Knoxville that data centers will have to '
-                                     'invest in grid capacity themselves so consumers '
-                                     'are not bearing the burden, responding to East '
-                                     'Tennessee moratoriums.',
-                          'items': [{'what': 'During a Knoxville visit, asked about '
-                                             "East Tennessee local governments' "
-                                             '12-month data-center moratoriums, '
-                                             "Hagerty said 'we made it very clear to "
-                                             "the data centers that they're going to "
-                                             'have to make the investment, not only in '
-                                             "our capacity but in our grid,' and that "
-                                             'tech companies must ensure consumers are '
-                                             "not 'bearing the burden' of the "
-                                             'facilities.',
-                                     'date': '2026-08-11',
-                                     'source': 'https://www.yahoo.com/news/politics/articles/sen-bill-hagerty-discusses-economic-194530943.html',
-                                     'source_name': 'WBIR (via Yahoo News)',
-                                     'kind': 'statement'}],
-                          'as_of': '2026-09-05'},
  ('TX', 'Ted Cruz'): {'lean': 'mixed',
                       'summary': 'Toured and applauded the Oracle/OpenAI Stargate data '
                                  'center in Abilene, and later said data-center '
@@ -2239,38 +1906,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                   'source_name': 'E&E News',
                                   'kind': 'statement'}],
                        'as_of': '2026-09-05'},
- ('VA', 'Mark R. Warner'): {'lean': 'mixed',
-                            'summary': 'ADDITIONAL: in July 2026 rolled out the Data '
-                                       'Center Tax Accountability and Disclosure Act, '
-                                       'which requires large AI data centers to '
-                                       'disclose energy, water, emissions and '
-                                       'backup-generation data and conditions bonus '
-                                       'depreciation on efficiency standards; in April '
-                                       "2026 he called a moratorium 'idiocy'.",
-                            'items': [{'what': 'Rolled out an AI legislative agenda '
-                                               'including the Data Center Tax '
-                                               'Accountability and Disclosure Act, '
-                                               'which requires large AI data centers '
-                                               'to publicly disclose energy and water '
-                                               'consumption, emissions, backup '
-                                               'generation and other operational '
-                                               'impacts, conditions federal bonus '
-                                               'depreciation on meeting efficiency and '
-                                               'sustainability standards, and '
-                                               'dedicates the resulting revenue to a '
-                                               'National Workforce Transition Fund.',
-                                       'date': '2026-07-21',
-                                       'source': 'https://www.warner.senate.gov/newsroom/press-releases/warner-rolls-out-comprehensive-ai-legislative-agenda-focused-on-responsible-innovation-workers-and-national-security/',
-                                       'source_name': 'Sen. Warner press release',
-                                       'kind': 'action'},
-                                      {'what': 'Dismissed the proposed data-center '
-                                               "moratorium as 'idiocy' at an Axios "
-                                               'event, per E&E News.',
-                                       'date': '2026-04-22',
-                                       'source': 'https://www.eenews.net/articles/data-center-moratorium-a-fault-line-in-dem-primaries/',
-                                       'source_name': 'E&E News',
-                                       'kind': 'statement'}],
-                            'as_of': '2026-09-05'},
  ('VT', 'Bernard Sanders'): {'lean': 'guardrails',
                              'summary': 'Introduced the AI Data Center Moratorium Act '
                                         '(S.4214) with Rep. Ocasio-Cortez to halt new '
@@ -2364,44 +1999,6 @@ SENATOR_RECORDS = {('AK', 'Lisa Murkowski'): {'lean': 'mixed',
                                     'source_name': 'Wisconsin Watch',
                                     'kind': 'statement'}],
                          'as_of': '2026-09-05'},
- ('WV', 'Shelley Moore Capito'): {'lean': 'mixed',
-                                  'summary': 'Actively recruits data centers to West '
-                                             "Virginia ('we want them') while saying "
-                                             'operators must engage communities early '
-                                             'and be transparent about local effects.',
-                                  'items': [{'what': 'On efforts to bring a data '
-                                                     "center to Logan County, said 'We "
-                                                     'want them in West Virginia. They '
-                                                     'are massive investments, '
-                                                     "billions of dollars,' and 'The "
-                                                     'appetite for power is going to '
-                                                     "be so huge. Everyone's going to "
-                                                     "win here.'",
-                                             'date': '2024-12-12',
-                                             'source': 'https://wvpublic.org/story/energy-environment/we-want-them-capito-supports-efforts-to-build-a-data-center/',
-                                             'source_name': 'West Virginia Public '
-                                                            'Broadcasting',
-                                             'kind': 'statement'},
-                                            {'what': 'Said data-center companies must '
-                                                     'have early and strong community '
-                                                     'engagement and that '
-                                                     "'transparency about the process "
-                                                     'and the effects on local '
-                                                     "residents could go a long way'; "
-                                                     'said proposed projects plan to '
-                                                     'build their own power, which '
-                                                     "'could actually maybe improve "
-                                                     'the situation because there will '
-                                                     'be excess power probably '
-                                                     "created,' and that water drawn "
-                                                     'from the Ohio would be '
-                                                     'replenished and cleaned.',
-                                             'date': '2026-04-24',
-                                             'source': 'https://www.capito.senate.gov/news/in-the-news/west-virginia-senator-says-early-community-engagement-from-data-centers-is-key',
-                                             'source_name': 'Fox 8 (reposted on '
-                                                            'capito.senate.gov)',
-                                             'kind': 'statement'}],
-                                  'as_of': '2026-09-05'},
  ('WV', 'James C. Justice'): {'lean': 'mixed',
                               'summary': 'Touts data-center investment in Mason County '
                                          'and tells companies coming to West Virginia '

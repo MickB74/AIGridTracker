@@ -1,5 +1,14 @@
 """
-2026 U.S. Senate races — where each candidate stands on AI data centers.
+2026 U.S. Senate races — where each candidate stood on AI data centers.
+
+**Frozen archive.** The election was held on 2026-11-03 and the race page
+(`senate-races.html`) was retired on 2026-11-28; it redirects to
+`senate-winners.html`. Nothing renders the 117-candidate field any more.
+What still reads this module: the ballot roster and results join
+(`races()`), which src/senate_winners.py uses to know who won and whose
+seat it was, and `AI_RECORDS`, which src/senators.py still shows for a
+sitting senator who lost, until that term ends. The winners' live records
+are in src/senate_winner_records.py — add new research there, not here.
 
 Why this exists
 ---------------

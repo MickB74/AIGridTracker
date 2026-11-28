@@ -42,6 +42,7 @@ sys.path.insert(0, str(ROOT))
 
 from src import race_common as rc                       # noqa: E402
 import src.senate_races as senate                       # noqa: E402
+from src.senate_winner_records import WINNER_RECORDS    # noqa: E402
 import src.house_races as house                         # noqa: E402
 
 QUEUE = ROOT / "data" / "candidate_record_candidates.json"
@@ -58,9 +59,15 @@ def _candidates(chamber):
     """(chamber, key, race_label, candidate) for every filed candidate."""
     out = []
     if chamber in ("senate", "both"):
+        # The Senate race is over and its tracker retired: only the winners
+        # are still published (src/senate_winners.py), so only they are
+        # worth raising leads for.
+        won = {st: rc.norm(v.get("winner") or "")
+               for st, v in (rc.load_results().get("senate") or {}).items()}
         for r in senate.SENATE_RACES_2026:
             for c in r["candidates"]:
-                out.append(("senate", r["abbrev"], r["state"], c))
+                if rc.norm(c["name"]) == won.get(r["abbrev"]):
+                    out.append(("senate", r["abbrev"], r["state"], c))
     if chamber in ("house", "both"):
         for r in house.HOUSE_RACES_2026:
             for c in r["candidates"]:
@@ -73,7 +80,7 @@ def _published(chamber):
     """Names already carrying a documented record — nothing to re-raise."""
     done = set()
     if chamber in ("senate", "both"):
-        done |= {rc.norm(k[-1]) for k in senate.AI_RECORDS}
+        done |= {rc.norm(k[-1]) for k, v in WINNER_RECORDS.items() if v.get("items")}
     if chamber in ("house", "both"):
         done |= {rc.norm(k[-1]) for k in house.AI_RECORDS}
     return done

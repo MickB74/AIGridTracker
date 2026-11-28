@@ -81,8 +81,8 @@ STANCES = {
         "for grid infrastructure; opposes moratoriums as a race to the bottom.",
         "sen_heinrich"),
     ("Senator", "VA", "warner"): (
-        "Sponsored legislation so Virginians aren't stuck footing data-center "
-        "utility costs, plus an energy/water disclosure bill.", "sen_warner"),
+        "Cosponsored legislation so Virginians aren't stuck footing data-center "
+        "utility costs, and introduced an energy/water disclosure bill.", "sen_warner"),
     ("Senator", "GA", "ossoff"): (
         "Launched an investigation into data centers' impact on Georgians' "
         "power bills.", "sen_ossoff"),
@@ -155,7 +155,7 @@ STANCES = {
         "fast-track data centers past clean-air, water and cost protections.",
         "sen_whitehouse"),
     ("Senator", "RI", "reed"): (
-        "Co-led the New England senators' letter asking ISO New England how it "
+        "Signed the New England senators' letter asking ISO New England how it "
         "will shield residential ratepayers from data-center-driven price "
         "increases.", "sen_reed"),
     ("Senator", "OR", "merkley"): (

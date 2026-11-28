@@ -1719,6 +1719,16 @@
       "permanent": true
     },
     {
+      "source": "/senate-races",
+      "destination": "/senate-winners",
+      "permanent": true
+    },
+    {
+      "source": "/senate-races.html",
+      "destination": "/senate-winners",
+      "permanent": true
+    },
+    {
       "source": "/:s([a-z0-9]+-[a-z0-9-]+-[a-z]{2}).html",
       "destination": "/communities/:s",
       "permanent": true
